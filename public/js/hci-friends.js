@@ -15,7 +15,8 @@ function initializePage() {
 function callAnagrammedName(event){
 	var name = $(this).text();
 	event.preventDefault(); 
-	anagrammedName(name);
+	var newname = anagrammedName(name);
+	$(this).text(newname);
 }
 
 
