@@ -10,9 +10,17 @@ $(document).ready(function() {
  */
 function initializePage() {
 	console.log("Javascript connected!");
+	$(".best-friends h3 a ").click(callAnagrammedName); 
+}
+function callAnagrammedName(event){
+	var name = $(this).text();
+	event.preventDefault(); 
+	anagrammedName(name);
 }
 
+
 function anagrammedName(name) {
+	console.log(name);
 	// Thanks, Internet Anagram Server!
 	
 	if (name == "Doug Engelbart") {
